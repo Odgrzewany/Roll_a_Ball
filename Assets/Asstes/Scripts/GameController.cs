@@ -81,13 +81,20 @@ public class GameController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            isGrounded = true;   
+           
+            isGrounded = true;
+            Debug.Log("ziemia");
+
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                
                 rb.AddForce(0, 1 * JumpVector, 0, ForceMode.Impulse);
                 isGrounded = false;
+                Debug.Log("skok");
+
             }
         }
+        
     }
     private void Update()
     {
@@ -101,6 +108,7 @@ public class GameController : MonoBehaviour
             speed = 10;            
         }
     }
+
 }
 
 
