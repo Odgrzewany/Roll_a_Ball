@@ -22,8 +22,13 @@ public class LevelController : MonoBehaviour {
     public UnityEngine.UI.Text LivesShow;
     public GameObject NormalDiff;
     public int LivesOn;
+    public ParticleSystem ps;
 
     void Start () {
+        if(ps.isPlaying == true)
+        {
+            ps.Stop(true);
+        }
         EndStats.SetActive(false);
         LooserStats.SetActive(false);
         ActualScore = 0;
@@ -69,11 +74,20 @@ public class LevelController : MonoBehaviour {
         
         if (GC.speedBoostTimer > 0)
         {
-            BoostsList.text = "Speed boosted for: " + GC.speedBoostTimer.ToString("00") + "s";
+            BoostsList.text = "Speed boosted !!!";
+
+            if(ps.isStopped == true)
+            {
+                ps.Play(true);
+            }
         }
         else
         {
             BoostsList.text = " ";
+            if (ps.isPlaying == true)
+            {
+                ps.Stop(true);
+            }
         }
         if(ActualScore == Manager.Instance.ScoreNedded && win == false)
         {

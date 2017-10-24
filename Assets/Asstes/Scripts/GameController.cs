@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
     public bool isGrounded;
     public float speedBoostTimer;
     public SceneLoader sl;
+    
 
 
 
@@ -57,6 +58,7 @@ public class GameController : MonoBehaviour
         {
             speedBoostTimer = 5;
             Destroy(other.gameObject);
+            
         }
         if (other.gameObject.CompareTag("End"))
         {
@@ -80,8 +82,7 @@ public class GameController : MonoBehaviour
     private void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
-        {
-           
+        {           
             isGrounded = true;
             Debug.Log("ziemia");
 
@@ -107,6 +108,7 @@ public class GameController : MonoBehaviour
         {
             speed = 10;            
         }
+        rb.WakeUp();
     }
 
 }
