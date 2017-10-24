@@ -12,9 +12,7 @@ public class GameController : MonoBehaviour
     public bool isGrounded;
     public float speedBoostTimer;
     public SceneLoader sl;
-    
-
-
+    public Material mat;
 
 
 
@@ -109,7 +107,9 @@ public class GameController : MonoBehaviour
             speed = 10;            
         }
         rb.WakeUp();
+        mat.color = Manager.Instance.color;
     }
+
 
 }
 

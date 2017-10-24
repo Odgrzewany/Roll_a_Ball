@@ -12,7 +12,7 @@ public class Manager : MonoBehaviour
     public int difficultychosen;
     public int Lives;
     public int whichLevelIsNow;
-
+    public Color color;
 
     private void Awake()
     {
@@ -48,4 +48,5 @@ public class Manager : MonoBehaviour
             whichLevelIsNow = 4;
         }
     }
+    
 }

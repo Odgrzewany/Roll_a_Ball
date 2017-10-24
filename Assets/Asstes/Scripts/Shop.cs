@@ -8,6 +8,7 @@ public class Shop : MonoBehaviour {
     public Material material;
     public ParticleSystem ps;
     public float Timer;
+   
 
     void Start () {
         cost = 10;
@@ -28,6 +29,7 @@ public class Shop : MonoBehaviour {
         {
             ps.Stop(true);
         }
+
 	}
 
 
@@ -45,6 +47,7 @@ public class Shop : MonoBehaviour {
             {
                 ps.Play(true);
             }
+            Manager.Instance.color = material.color;
         }      
     }
 }

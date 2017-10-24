@@ -1483,6 +1483,7 @@ MonoBehaviour:
   isGrounded: 0
   speedBoostTimer: 0
   sl: {fileID: 0}
+  mat: {fileID: 2100000, guid: c91328aceeb160b43acb742049f75c28, type: 2}
 --- !u!54 &310825440
 Rigidbody:
   m_ObjectHideFlags: 0
